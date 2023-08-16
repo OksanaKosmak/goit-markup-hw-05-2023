@@ -868,7 +868,7 @@ ul, ol {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
     z-index: 100;
-    transition:  ;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -879,7 +879,7 @@ ul, ol {
     left: 50%;
     width: 528px;
     height: 581px;
-    background: #FFF;
+    background-color: #FFF;
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     
@@ -891,6 +891,7 @@ ul, ol {
     height: 30px;
     background-color: transparent;
     padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -898,8 +899,8 @@ ul, ol {
     position: absolute;
     top: 8px;
     right: 8px;
-    border-color:#000000;
-    transform: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: rgba(0, 0, 0, 0.10);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -910,7 +911,7 @@ ul, ol {
     justify-content: center;
     align-items: center;
     fill: var(--color-modal-close-button-icon);
-    transform: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrope.is-hidden {
@@ -923,6 +924,7 @@ ul, ol {
 .modal-close-button:focus {
     border-color: var(--color-modal-close-button-icon-accent);
 }
+
 
 .modal-close-button:hover .modal-close-button-icon,
 .modal-close-button:focus .modal-close-button-icon {
